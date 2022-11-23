@@ -6,6 +6,7 @@ import { StyleSheet, Text, View } from "react-native";
 import Header from "./components/Header";
 import StorySlider from "./components/StorySlider";
 import Posts from "./components/Posts";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <StorySlider />
         <Posts />
       </ScrollView>
+      <Footer />
     </View>
   );
 }
