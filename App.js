@@ -1,4 +1,4 @@
-import { NativeModules } from "react-native";
+import { NativeModules, ScrollView } from "react-native";
 const { StatusBarManager } = NativeModules;
 const STATUSBAR_HEIGHT = Platform.OS === "ios" ? 20 : StatusBarManager.HEIGHT;
 import { StatusBar } from "expo-status-bar";
@@ -12,8 +12,10 @@ export default function App() {
     <View style={styles.container}>
       <StatusBar style="light" />
       <Header />
-      <StorySlider />
-      <Posts />
+      <ScrollView>
+        <StorySlider />
+        <Posts />
+      </ScrollView>
     </View>
   );
 }

@@ -77,6 +77,7 @@ function Header() {
 
 const styles = StyleSheet.create({
   header: {
+    paddingBottom: 15,
     marginTop: 18,
     position: "relative",
     marginHorizontal: 10,
@@ -89,7 +90,7 @@ const styles = StyleSheet.create({
       top: 0,
       left: 0,
       right: 0,
-      bottom: 0,
+      bottom: 5,
       justifyContent: "center",
       alignItems: "center",
   },

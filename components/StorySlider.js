@@ -63,7 +63,6 @@ function StorySlider() {
 
 const styles = StyleSheet.create({
   StorySliderCont: {
-    marginTop: 15,
     maxHeight: 90,
     flexDirection: "row",
   },

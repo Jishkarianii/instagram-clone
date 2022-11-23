@@ -1,6 +1,7 @@
 import { Image, StyleSheet, Text, View } from "react-native";
 import { Path, Svg } from "react-native-svg";
 import joshua_l from "../assets/img/joshua_l.png";
+import Slider from "./Slider";
 
 function PostItem() {
   return (
@@ -47,12 +48,15 @@ function PostItem() {
           />
         </Svg>
       </View>
+      <Slider />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    height: 500
+  },
   head: {
     marginLeft: 10,
     marginRight: 15,
