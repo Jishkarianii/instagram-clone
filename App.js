@@ -5,6 +5,7 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import Header from "./components/Header";
 import StorySlider from "./components/StorySlider";
+import Posts from "./components/Posts";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       <StatusBar style="light" />
       <Header />
       <StorySlider />
+      <Posts />
     </View>
   );
 }
@@ -22,5 +24,4 @@ const styles = StyleSheet.create({
     paddingTop: STATUSBAR_HEIGHT,
     backgroundColor: "#000000",
   },
-  
 });
