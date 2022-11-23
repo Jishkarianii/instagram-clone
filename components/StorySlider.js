@@ -47,6 +47,7 @@ function StorySlider() {
   return (
     <ScrollView 
         horizontal={true}
+        showsHorizontalScrollIndicator={false}
         style={styles.StorySliderCont}
     >
       {users.map((user) => (
@@ -63,6 +64,7 @@ function StorySlider() {
 const styles = StyleSheet.create({
   StorySliderCont: {
     marginTop: 15,
+    maxHeight: 90,
     flexDirection: "row",
   },
 });
