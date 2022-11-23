@@ -1,27 +1,9 @@
 import { StyleSheet, Text, View } from "react-native";
 import Swiper from "react-native-swiper";
 import SliderItem from "./SliderItem";
-import slide_1 from "../assets/img/slide_1.jpg";
-import slide_2 from "../assets/img/slide_2.jpg";
-import slide_3 from "../assets/img/slide_3.jpg";
 import { useState } from "react";
 
-const photos = [
-  {
-    id: 1,
-    url: slide_1,
-  },
-  {
-    id: 2,
-    url: slide_2,
-  },
-  {
-    id: 3,
-    url: slide_3,
-  },
-];
-
-function Slider() {
+function Slider({ data }) {
   const [slideIndex, setSlideIndex] = useState(1);
 
   const renderPagination = (index) => {
@@ -37,12 +19,12 @@ function Slider() {
         onIndexChanged={renderPagination}
         style={styles.swiper}
       >
-        {photos.map((photo) => (
+        {data.map((photo) => (
           <SliderItem key={photo.id} url={photo.url} />
         ))}
       </Swiper>
       <Text style={styles.counter}>
-        {slideIndex}/{photos.length}
+        {slideIndex}/{data.length}
       </Text>
     </View>
   );
